@@ -3,9 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-const App = ({title}) => (
-        <div className="header">{title}</div>
-);
+class App extends React.Component {
+    render () {
+        return <div className="header">{this.props.title}</div>;
+    }
+}
+
+// const App = ({title}) => (
+//         <div className="header">{title}</div>
+// );
+
 ReactDOM.render(
   <App title="The Github Cards App"/>,
   document.getElementById('root')
