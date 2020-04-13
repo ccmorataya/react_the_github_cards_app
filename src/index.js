@@ -3,15 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-class App extends React.Component {
-    render () {
-        return <div className="header">{this.props.title}</div>;
+class Card extends React.Component {
+    render() {
+        return (
+            <div className="github-profile">
+              <img alt="" src="https://placehold.it/75"/>
+              <div className="info">
+                <div className="name">Name here...</div>
+                <div className="company">Company here</div>
+              </div>
+            </div>
+        );
     }
 }
 
-// const App = ({title}) => (
-//         <div className="header">{title}</div>
-// );
+class App extends React.Component {
+    render () {
+        return (
+            <div>
+              <div className="header">{this.props.title}</div>
+              <Card/>
+            </div>
+        );
+    }
+}
 
 ReactDOM.render(
   <App title="The Github Cards App"/>,
